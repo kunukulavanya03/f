@@ -16,8 +16,8 @@ load_dotenv()
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="Backend_Api_For_F,_Built_Using_Fastapi_And_Sqlalchemy,_To_Provide_A_Robust_And_Scalable_Backend_For_The_React_Frontend. API",
-    description="Complete backend API for backend_api_for_f,_built_using_fastapi_and_sqlalchemy,_to_provide_a_robust_and_scalable_backend_for_the_react_frontend.",
+    title="Backend_Api_For_F,_A_React-Based_Frontend_Application._The_Api_Will_Provide_Data_Storage,_Retrieval,_And_Manipulation_Capabilities_Using_Fastapi_And_Sqlalchemy. API",
+    description="Complete backend API for backend_api_for_f,_a_react-based_frontend_application._the_api_will_provide_data_storage,_retrieval,_and_manipulation_capabilities_using_fastapi_and_sqlalchemy.",
     version="1.0.0"
 )
 
@@ -42,11 +42,11 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Backend_Api_For_F,_Built_Using_Fastapi_And_Sqlalchemy,_To_Provide_A_Robust_And_Scalable_Backend_For_The_React_Frontend. API", "status": "running"}
+    return {"message": "Welcome to Backend_Api_For_F,_A_React-Based_Frontend_Application._The_Api_Will_Provide_Data_Storage,_Retrieval,_And_Manipulation_Capabilities_Using_Fastapi_And_Sqlalchemy. API", "status": "running"}
 
 @app.get("/health")
 def health_check():
-    return {"status": "healthy", "service": "backend_api_for_f,_built_using_fastapi_and_sqlalchemy,_to_provide_a_robust_and_scalable_backend_for_the_react_frontend."}
+    return {"status": "healthy", "service": "backend_api_for_f,_a_react-based_frontend_application._the_api_will_provide_data_storage,_retrieval,_and_manipulation_capabilities_using_fastapi_and_sqlalchemy."}
 
 # Authentication endpoints
 @app.post("/auth/register")
