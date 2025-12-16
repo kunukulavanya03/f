@@ -1,4 +1,4 @@
-# Backend_Api_For_A_React-Based_Frontend_Application,_Built_Using_Fastapi_And_Sqlalchemy. Backend API
+# Backend_Api_For_F,_A_React-Based_Frontend_Application._The_Api_Will_Provide_Data_Storage,_Retrieval,_And_Manipulation_Capabilities_Using_Fastapi_And_Sqlalchemy. Backend API
 
 Complete FastAPI backend with authentication, database models, and API endpoints.
 
