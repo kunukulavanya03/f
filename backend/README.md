@@ -1,29 +1,71 @@
-# FastAPI Backend
+# Backend_Api_For_A_React-Based_Frontend_Application,_Built_Using_Fastapi_And_Sqlalchemy. Backend API
 
-This is a FastAPI backend application.
+Complete FastAPI backend with authentication, database models, and API endpoints.
+
+## Features
+
+- FastAPI framework with automatic OpenAPI documentation
+- JWT authentication with user registration/login
+- SQLAlchemy ORM with database models
+- Pydantic schemas for request/response validation
+- CORS middleware for frontend integration
+- Comprehensive error handling
+- Database migrations with Alembic
 
 ## Setup
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Create a new database: `sqlite3 app.db`
-3. Run the application: `uvicorn app.main:app --host 0.0.0.0 --port 8000`
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Set up environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
+
+3. Run the application:
+```bash
+python main.py
+```
+
+Or with uvicorn:
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
 
 ## API Documentation
 
-The API documentation is available at `/docs`.
+Once running, visit:
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
 
-## Usage
+## API Endpoints
 
-You can use the API by sending HTTP requests to the endpoints.
+### Authentication
+- POST `/auth/register` - Register new user
+- POST `/auth/login` - Login user
 
-For example, you can create a new user by sending a `POST` request to `/api/users` with a JSON body containing the user's name and email.
+### Core Endpoints
+- GET `/api/items` - Get all items
+- POST `/api/items` - Create new item
+- PUT `/api/items/<built-in function id>` - Update item
+- DELETE `/api/items/<built-in function id>` - Delete item
+
+## Database
+
+The application uses SQLite by default. To use PostgreSQL:
+
+1. Install PostgreSQL
+2. Update DATABASE_URL in .env:
+```
+DATABASE_URL=postgresql://user:password@localhost/dbname
+```
 
 ## Testing
 
-You can run the tests by executing `pytest` in the terminal.
-
-## Docker
-
-You can build a Docker image by executing `docker build -t fastapi-backend.` in the terminal.
-
-You can run the Docker container by executing `docker run -p 8000:8000 fastapi-backend` in the terminal.
+Run tests with:
+```bash
+pytest
+```
